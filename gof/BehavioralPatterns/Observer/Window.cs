@@ -14,13 +14,16 @@ namespace Gof.BehavioralPatterns.Observer
             newContent = new string[0];
         }
 
-        public string[] FileContent {
-            get { 
+        public string[] FileContent
+        {
+            get
+            { 
                 return fileContent;
             }
         }
 
-        public virtual void WriteLine(string line) {
+        public virtual void WriteLine(string line)
+        {
             if (string.IsNullOrEmpty(line)) return;
 
             var newSize = this.newContent.Length + 1;
@@ -28,7 +31,8 @@ namespace Gof.BehavioralPatterns.Observer
             this.newContent[newSize - 1] = line;
         }
 
-        public virtual void Save() {
+        public virtual void Save()
+        {
             if (newContent.Length == 0) return;
             
             var newDataSize = this.newContent.Length;
