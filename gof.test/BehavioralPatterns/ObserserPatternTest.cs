@@ -13,7 +13,8 @@ namespace gof.test.BehavioralPatterns
         protected CodeView codeView;
 
         [TestInitialize]
-        public void SetUp() {
+        public void SetUp()
+        {
             subject = new MainWindow();
             var initialContent = new string[] { "line 01" };
             designView = new DesignView(initialContent);

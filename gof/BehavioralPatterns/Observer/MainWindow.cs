@@ -11,15 +11,18 @@ namespace Gof.BehavioralPatterns.Observer
             observers = new Dictionary<string, Window>();
         }
 
-        public void Add(string key, Window observer) {
+        public void Add(string key, Window observer)
+        {
             observers.Add(key, observer);
         }
 
-        public void Remove(string key) {
+        public void Remove(string key)
+        {
             observers.Remove(key);
         }
 
-        public void SaveAll() {
+        public void SaveAll()
+        {
             foreach (var name in observers.Keys)
             {
                 observers[name].Save();

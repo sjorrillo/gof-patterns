@@ -9,7 +9,8 @@ namespace Gof.BehavioralPatterns.Observer
         {
         }
 
-        public override void Save() {
+        public override void Save()
+        {
             Console.WriteLine("Saving code view content");
             base.Save();
         }
